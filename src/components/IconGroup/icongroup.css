@@ -1,0 +1,37 @@
+.icons-navbar {
+    color: rgb(206, 204, 204);
+    font-size: 1.5rem;
+    padding: 10px;
+    background: rgb(29, 29, 29);
+    border-radius: 10px;
+}
+
+.icon-text {
+    color: white;
+    font-family: "poppins";
+    font-weight: 400;
+}
+
+.icons-section {
+    
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .7rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 250ms;
+}
+@media (min-width:700px) {
+    .icon-desktop-wrapper {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+    }
+
+    .icons-section:hover,
+    .icons-section:focus {
+        transform: scale(.9);
+    }
+ 
+ }      

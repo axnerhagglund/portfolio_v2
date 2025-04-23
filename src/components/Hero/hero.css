@@ -1,0 +1,48 @@
+
+
+
+
+
+.hero__title{
+    font-family:"poppins", sans-serif;
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    color: #fff;
+    font-weight: 400;
+    line-height: 4rem;
+}
+.hero__title-axner {
+    font-weight: 600;
+}
+
+.hero-subrubrik {
+    font-family: "poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 500px;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+@media (min-width:700px) {
+   
+    .hero__title {
+       font-size: 4.5rem;
+       line-height: 1.3;
+       display: inline;
+       
+    }
+ 
+    .hero-subrubrik {
+       font-size: 2.3rem;
+       max-width: 700px;
+    }
+
+ 
+    
+ } 
+
+ 
+ 

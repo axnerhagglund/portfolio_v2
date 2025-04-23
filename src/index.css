@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  background:#0A0A0A;
+}
+
+
+
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media (min-width:750px) {
+  .wrapper-flex {
+      display: flex;
+      
+      gap: 1rem;
+      justify-content: space-between;
+
+     }
+}

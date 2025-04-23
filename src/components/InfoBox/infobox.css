@@ -1,0 +1,38 @@
+.axner-image {
+    border-radius: 12px;
+    width:60px;
+    height: 60px;
+    object-fit: cover;
+    letter-spacing: 1px;
+    display: inline-block;
+    -webkit-box-shadow: -7px -8px 135px 15px rgba(255,255,255,0.35);
+    -moz-box-shadow: -7px -8px 135px 15px rgba(255,255,255,0.35);
+    box-shadow: -7px -8px 135px 15px rgba(255,255,255,0.35);
+
+}
+
+.image-text-darkgrey {
+
+    color: rgba(128, 128, 128, 0.418);
+}
+
+.image-card-container {
+    margin-top: 1.7rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+}
+
+.image-text {
+    color: #fff;
+    font-family:"poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.gray {
+    color: rgb(158, 156, 156);
+}
+
