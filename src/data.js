@@ -2,7 +2,7 @@ export const projects = [
     {
       id: 1,
       title: "Minimalist Design",
-      image: "public/images/bonz-landingpage.png",
+      image: "/images/bonz-landingpage.png",
       alt: "Picture of a hotel website landing page", 
       tags: ["Html", "Css", "Javascript"],
       description:
@@ -14,7 +14,7 @@ export const projects = [
     {
       id: 2,
       title: "Movie data base",
-      image: "public/images/axnersfilmdatabas.png",
+      image: "/images/axnersfilmdatabas.png",
       alt: "picture of a movie data base landing page",
       tags: ["React", "API", "Styled Components"],
       description:
