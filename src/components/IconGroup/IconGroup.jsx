@@ -19,10 +19,10 @@ function IconGroup() {
             </section>
         </Link>
 
-            <section className="icons-section">
+            <a className="icons-section" href="https://www.linkedin.com/in/axnerh%C3%A4gglund/" >
                 <i className="ri-chat-3-line icons-navbar"></i>
                 <p className="icon-text">Say hello! </p>
-            </section>
+            </a>
         </div>
   )
 }
