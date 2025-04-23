@@ -1,7 +1,7 @@
 import Hero from "../../components/Hero/Hero"
 import "./homepage.css"
-import {quickInfo} from "../../QuickInfoData"
-import {projects} from "../../data"
+import {quickInfo} from "../../quickInfoData.js"
+import {projects} from "../../data.js"
 import CardList from "../../components/CardList/CardList"
 import QuickInfoCardList from "../../components/QuickInfoCardList/QuickInfoCardList"
 function HomePage() {
