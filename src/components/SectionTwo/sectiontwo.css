@@ -1,0 +1,23 @@
+.sectionTwo{
+    max-width: 400px;
+}
+
+.sectionTwo__h1 {
+    font-family: "poppins";
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.sectionTwo__p {
+    font-family: "poppins";
+    
+    
+}
+
+.first-column {
+    margin-bottom: 1rem;
+}
+
+.sectionTwo__span {
+    font-weight: 600;
+}

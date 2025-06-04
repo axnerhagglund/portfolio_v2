@@ -6,7 +6,7 @@ import CardList from "../../components/CardList/CardList"
 import QuickInfoCardList from "../../components/QuickInfoCardList/QuickInfoCardList"
 function HomePage() {
   return (
-    <>
+    <section className="app">
     <Hero />
     
       {
@@ -19,7 +19,7 @@ function HomePage() {
         
       
       
-    </>
+    </section>
   )
 }
 

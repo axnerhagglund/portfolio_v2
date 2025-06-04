@@ -21,9 +21,9 @@ function App() {
   
 
   return (
-    <section className="app">
+    
       <RouterProvider router={ router } />
-    </section>
+    
   )
 }
 

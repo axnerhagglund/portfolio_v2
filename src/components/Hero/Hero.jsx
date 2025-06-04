@@ -1,9 +1,12 @@
 import "./hero.css"
 import InfoBox from "../InfoBox/InfoBox"
 import IconGroup from "../IconGroup/IconGroup"
+import CornerBlob from "../CornerBlob/CornerBlob"
+
 function Hero() {
   return (
     <>
+    <CornerBlob/>
     <section className="hero">
         <h1 className="hero__title">Hey,<br></br> I'm <span className="hero__title-axner">Axner</span></h1>
         <InfoBox />

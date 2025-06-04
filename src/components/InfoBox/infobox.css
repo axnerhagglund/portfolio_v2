@@ -5,9 +5,7 @@
     object-fit: cover;
     letter-spacing: 1px;
     display: inline-block;
-    -webkit-box-shadow: -7px -8px 135px 15px rgba(255,255,255,0.35);
-    -moz-box-shadow: -7px -8px 135px 15px rgba(255,255,255,0.35);
-    box-shadow: -7px -8px 135px 15px rgba(255,255,255,0.35);
+   
 
 }
 

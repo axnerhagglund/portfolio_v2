@@ -1,0 +1,25 @@
+.corner-blob {
+  position: absolute;
+  bottom: 550px;
+  right: 0px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #1b1b1b, #363535);
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.5;
+  animation: pulse 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2) translate(-10px, -10px);
+    opacity: 0.7;
+  }
+}

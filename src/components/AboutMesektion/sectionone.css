@@ -1,0 +1,28 @@
+.sectionOne {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sectionOne__img{
+   width: 150px;
+}
+
+.sectionOne__h1{
+    font-size: 1.3rem;
+    font-family: poppins;
+    margin-bottom: 1rem;
+}
+
+.sectionOne__ul {
+    font-family: poppins;
+    margin-bottom: 1rem;
+}
+
+.sectionOne__li-item::marker{
+    color: rgb(188, 95, 41);
+}
+

@@ -16,11 +16,13 @@ export const projects = [
       title: "Movie data base",
       image: "/images/axnersfilmdatabas.png",
       alt: "picture of a movie data base landing page",
-      tags: ["React", "API", "Styled Components"],
+      tags: ["JavaScript", "Css", "Html"],
       description:
         "My first ever heavy JavaScript project, where i gathered some experience under my belt, such as working with Asynchronous JavaScript and API Integration. This was overall a really fun project, intergratiating with web API's really changed the game.",
       buttonText: "View",
       link: "https://axnersfilmdatabas.netlify.app/"
     },
+    
+    
     
   ];

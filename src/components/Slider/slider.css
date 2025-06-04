@@ -1,0 +1,70 @@
+/* Slider Layout */
+.slider__main {
+  width: 100%;
+  padding: 4rem 0;
+  
+  display: flex;
+  justify-content: center;
+}
+
+.slider__container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+/* Swiper Core Styling Enhancements */
+.swiper {
+  padding-bottom: 3rem;
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card Pop Effect */
+.swiper-slide-active {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+/* Pagination Styling */
+.swiper-pagination-bullets {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #d1d5db;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #111827;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+@keyframes slide-wiggle {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(12px); }
+  40% { transform: translateX(-10px); }
+  60% { transform: translateX(8px); }
+  80% { transform: translateX(-6px); }
+  100% { transform: translateX(0); }
+}
+
+.card-wiggle {
+  animation: slide-wiggle 1.5s ease-in-out;
+}
+
+
