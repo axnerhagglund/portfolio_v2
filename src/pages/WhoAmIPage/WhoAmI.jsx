@@ -1,7 +1,7 @@
 import {motion, useAnimation} from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import InfoBox from "../../components/InfoBox/InfoBox"
-import SectionOne from "../../components/AboutMesektion/SectionOne"
+import SectionOne from "../../components/SectionOne/SectionOne"
 import SectionTwo from "../../components/SectionTwo/SectionTwo"
 
 import React from "react"
