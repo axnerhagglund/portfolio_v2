@@ -1,9 +1,9 @@
-import Hero from "../../components/Hero/Hero"
+import Hero from "../../components/Hero/Hero.jsx"
 import "./homepage.css"
 import {quickInfo} from "../../quickInfoData.js"
 import {projects} from "../../data.js"
-import CardList from "../../components/CardList/CardList"
-import QuickInfoCardList from "../../components/QuickInfoCardList/QuickInfoCardList"
+import CardList from "../../components/CardList/CardList.jsx"
+import QuickInfoCardList from "../../components/QuickInfoCardList/QuickInfoCardList.jsx"
 function HomePage() {
   return (
     <section className="app">

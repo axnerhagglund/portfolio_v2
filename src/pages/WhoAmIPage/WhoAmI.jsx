@@ -3,9 +3,11 @@ import { useInView } from "react-intersection-observer"
 import InfoBox from "../../components/InfoBox/InfoBox"
 import SectionOne from "../../components/AboutMesektion/SectionOne"
 import SectionTwo from "../../components/SectionTwo/SectionTwo"
+
 import React from "react"
 import { Link } from "react-router-dom"
 import "./whoami.css"
+import SectionThree from "../../components/SectionThree/SectionThree"
 
 
 function ScrollSection({ children }) {
@@ -81,8 +83,7 @@ export default function WhoAmI() {
 
       <section className="snap-section bg-inspiration">
         <ScrollSection>
-          <h2>💡 What inspires me</h2>
-          <p>Design systems, interactive UI, and turning ideas into usable products.</p>
+          <SectionThree />
         </ScrollSection>
       </section>
     </div>
