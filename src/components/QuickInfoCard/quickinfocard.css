@@ -4,6 +4,7 @@
     
     max-width: 400px;
     text-align: center;
+    
 }
 
 .experience-title {
@@ -33,7 +34,7 @@
 .experience-subsubtitle {
     font-family: poppins;
     font-size: 1.4rem;
-
+    
 }
 .icons-experience {
     margin-bottom: 3rem;

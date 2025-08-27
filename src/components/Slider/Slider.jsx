@@ -23,7 +23,7 @@ import Card from "../Card/Card.jsx"
     <Swiper
       modules={[Pagination]}
       grabCursor
-      initialSlide={2}
+      initialSlide={1}
       centeredSlides
       slidesPerView="auto"
       speed={800}

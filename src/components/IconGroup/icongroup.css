@@ -22,11 +22,13 @@
     text-decoration: none;
     transition: all 250ms;
 }
+
 @media (min-width:700px) {
     .icon-desktop-wrapper {
      display: flex;
      flex-direction: row;
      justify-content: space-between;
+     max-width: 800px;
     }
 
     .icons-section:hover,

@@ -2,7 +2,7 @@ import "./cardlist.css"
 import Card from "../Card/Card"
 function CardList({projects}) {
   return (
-    <section className = "wrapper-flex">
+    <section className = "card-container-grid">
         {
             projects.map(project => {
                 return <Card

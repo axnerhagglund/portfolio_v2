@@ -1,5 +1,6 @@
 import "./icongroup.css"
 import { Link } from "react-router-dom"
+
 function IconGroup() {
   return (
 
@@ -21,7 +22,7 @@ function IconGroup() {
 
             <a className="icons-section" href="https://www.linkedin.com/in/axnerh%C3%A4gglund/" >
                 <i className="ri-chat-3-line icons-navbar"></i>
-                <p className="icon-text">Say hello! </p>
+                <p className="icon-text">Say hello<i class="ri-arrow-right-up-line"></i></p>
             </a>
         </div>
   )

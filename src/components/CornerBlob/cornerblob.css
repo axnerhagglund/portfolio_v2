@@ -1,9 +1,9 @@
 .corner-blob {
   position: absolute;
   bottom: 550px;
-  right: 0px;
+  right: 20px;
   width: 200px;
-  height: 200px;
+  height: 400px;
   background: radial-gradient(circle, #1b1b1b, #363535);
   border-radius: 50%;
   filter: blur(40px);
