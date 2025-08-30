@@ -1,9 +1,8 @@
 .experince-card {
     margin-top: 2em;
     color: white;
-    
     max-width: 400px;
-    text-align: center;
+    text-align: left;
     
 }
 
@@ -11,24 +10,28 @@
     font-family: poppins;
     font-size: 2.1rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
 .experience-subtitle {
     font-family: "poppins";
-    line-height: 1.6;
-    margin-bottom: 3em;
-    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    text-align: left;
 }
 
 .ri-code-box-line {
     font-size: 3.5rem;
+    text-align: left;
     
 }
 
 .ri-layout-6-line {
     color: white;
     font-size: 3.5rem;
+    text-align: left;
 }
 
 .experience-subsubtitle {
@@ -38,9 +41,11 @@
 }
 .icons-experience {
     margin-bottom: 3rem;
+   
 }
 .skill-icon {
     font-size: 2rem;
+    
 }
 
 .devtool-list {

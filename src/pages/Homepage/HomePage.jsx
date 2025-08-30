@@ -9,9 +9,9 @@ function HomePage() {
     <section className="app">
     <Hero />
     
-      {
+      {/* {
         projects && <CardList key={projects.id} projects={ projects } />
-      }
+      } */}
 
       {
         quickInfo && <QuickInfoCardList key={quickInfo.id} quickInfo={ quickInfo }/>
