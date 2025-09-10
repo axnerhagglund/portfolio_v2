@@ -10,11 +10,12 @@ export const  quickInfo = [
           { name: "HTML5", iconClass: "ri-html5-line" },
           { name: "CSS3", iconClass: "ri-css3-line" },
           { name: "JavaScript", iconClass: "ri-javascript-line" },
-          { name: "React", iconClass: "ri-reactjs-line" }
+          { name: "React", iconClass: "ri-reactjs-line" },
+          { name: "Node", iconClass: "ri-nodejs-line" }
         ],
       
         toolsTitle: "Dev tools:",
-        tools: ["Github", "VsCode", "Git bash"]
+        tools: ["Github", "VsCode", "Git bash","Amazon AWS","Serverless"]
 
     },
     {
