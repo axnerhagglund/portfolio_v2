@@ -31,8 +31,20 @@ export const projects = [
       description:
         "I built a React app where users could browse and buy concert tickets by fetching data from an external API. I used Zustand for global state management and Framer Motion for smooth animations.",
       buttonText: "View",
-      link: "https://axnersfilmdatabas.netlify.app/"
+      link: ""
+   },
+    {
+    id: 4,
+      title: "Allemansrätten",
+      image: "/images/allemansratten.png",
+      alt: "picture of where its at background base landing page",
+      tags: ["React", "Css"],
+      description:
+        "A standalone project made for those not familiar with Allemansrätten. Built with react. Mostly a shell right now.",
+      buttonText: "View",
+      link: "https://allemansrattenv1.vercel.app/"
    }
+
 
     
     
