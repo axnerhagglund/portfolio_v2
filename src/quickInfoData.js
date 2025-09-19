@@ -3,7 +3,7 @@ export const  quickInfo = [
         id: "1",
         title: "Frontend Developer",
         // iconClass: "ri-code-box-line", 
-        description: "During my education as a frontend developer, I have gained solid knowledge in areas such as UX design, HTML & CSS, JavaScript, agile methodologies, and React. Alongside my studies, I dedicate additional time to expanding my skills on Scrimba, focusing on JavaScript, responsive design, and React. I look forward to applying my newly learned skills to the real world!",
+        description: "After seven years of working with logistics and sales im now working towards becoming a frontend developer. I'm a quick learner and hey! Thats very fortunate because every other day there is something new",
         
         skillsTitle: "I can speak:",
         skills: [
