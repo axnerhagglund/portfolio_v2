@@ -2,35 +2,51 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
 }
 
 body {
   min-height: 100vh;
-  background:#0A0A0A;
+  background: #0A0A0A;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid #36D7EC;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .app {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0  1em;
+  padding: 0 1em;
 }
 
-.link {
-  text-decoration: none;
-}
+.link { text-decoration: none; }
 
 img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 5px;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .wrapper-flex {
-      display: flex;
-      
-      gap: 1rem;
-      justify-content: space-between;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
 
-     }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
