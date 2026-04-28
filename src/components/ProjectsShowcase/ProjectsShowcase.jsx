@@ -43,13 +43,12 @@ export default function ProjectsShowcase({ projects: projectList, showFilters = 
                 {idxStr} / {countStr}
               </span>
             </p>
-            <div className="ps-filters" role="tablist" aria-label="Filter by tag">
+            <div className="ps-filters" role="group" aria-label="Filter by tag">
               {allTags.map(tag => (
                 <button
                   key={tag}
                   type="button"
-                  role="tab"
-                  aria-selected={active === tag}
+                  aria-pressed={active === tag}
                   className={`ps-chip${active === tag ? " is-active" : ""}`}
                   onClick={() => {
                     setActive(tag)

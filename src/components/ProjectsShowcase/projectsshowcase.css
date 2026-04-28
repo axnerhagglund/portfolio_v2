@@ -38,11 +38,12 @@
 
 .ps-chip {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.45rem 0.8rem;
+  min-height: 44px;
+  padding: 0 0.95rem;
   border-radius: 3px;
   border: 1px solid var(--ps-pill-border);
   background: var(--ps-pill);
@@ -54,6 +55,12 @@
 .ps-chip:hover {
   color: #ccc;
   border-color: #444;
+}
+
+.ps-chip:focus-visible,
+.ps-linkout:focus-visible {
+  outline: 2px solid var(--ps-accent);
+  outline-offset: 2px;
 }
 
 .ps-chip.is-active {
@@ -199,7 +206,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #5c5c5c;
+  color: #848484;
 }
 
 .ps-empty {
