@@ -1,5 +1,5 @@
 .sectionThree {
-    font-family: "poppins";
+    font-family: var(--font-sans);
 }
 
 .funcolor-span {

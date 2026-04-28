@@ -7,7 +7,7 @@
 }
 
 .experience-title {
-    font-family: poppins;
+    font-family: var(--font-sans);
     font-size: 2.1rem;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -15,7 +15,7 @@
 }
 
 .experience-subtitle {
-    font-family: "poppins";
+    font-family: var(--font-sans);
     line-height: 1.8;
     margin-bottom: 2rem;
     font-size: 1.1rem;
@@ -35,7 +35,7 @@
 }
 
 .experience-subsubtitle {
-    font-family: poppins;
+    font-family: var(--font-sans);
     font-size: 1.4rem;
     
 }
@@ -50,7 +50,7 @@
 
 .devtool-list {
     list-style: none;
-    font-family: poppins;
+    font-family: var(--font-sans);
     
 }
 

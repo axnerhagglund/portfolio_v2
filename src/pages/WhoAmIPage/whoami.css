@@ -54,7 +54,7 @@
   letter-spacing: -0.02em;
   line-height: 1;
   will-change: transform;
-  font-family: "poppins", sans-serif;
+  font-family: var(--font-sans);
 }
 
 .wai-photo {
@@ -67,17 +67,17 @@
 }
 
 .wai-intro-inner  { display: flex; flex-direction: column; gap: 2rem; max-width: 860px; width: 100%; }
-.wai-intro-label  { color: #36D7EC; font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 0.5rem; font-family: "poppins", sans-serif; }
-.wai-intro-title  { font-family: "poppins", sans-serif; font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 600; line-height: 1.05; color: #fff; }
-.wai-intro-sub    { font-family: "poppins", sans-serif; font-size: 1.15rem; color: #9e9c9c; line-height: 1.8; max-width: 480px; margin-top: 1.5rem; }
+.wai-intro-label  { color: #36D7EC; font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 0.5rem; font-family: var(--font-sans); }
+.wai-intro-title  { font-family: var(--font-sans); font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 600; line-height: 1.05; color: #fff; }
+.wai-intro-sub    { font-family: var(--font-sans); font-size: 1.15rem; color: #9e9c9c; line-height: 1.8; max-width: 480px; margin-top: 1.5rem; }
 .wai-intro-row    { display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
-.wai-scroll-cue   { margin-top: 2rem; display: flex; align-items: center; gap: 0.6rem; color: #383838; font-size: 0.85rem; font-family: "poppins", sans-serif; }
+.wai-scroll-cue   { margin-top: 2rem; display: flex; align-items: center; gap: 0.6rem; color: #383838; font-size: 0.85rem; font-family: var(--font-sans); }
 .wai-scroll-line  { width: 40px; height: 1px; background: #383838; }
 
 .wai-content         { max-width: 860px; width: 100%; }
-.wai-section-label   { color: #36D7EC; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.2rem; font-family: "poppins", sans-serif; }
-.wai-section-title   { font-family: "poppins", sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 600; line-height: 1.1; margin-bottom: 1.8rem; color: #fff; }
-.wai-section-body    { font-family: "poppins", sans-serif; font-size: 1.1rem; line-height: 1.9; color: #bbb; max-width: 560px; }
+.wai-section-label   { color: #36D7EC; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 1.2rem; font-family: var(--font-sans); }
+.wai-section-title   { font-family: var(--font-sans); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 600; line-height: 1.1; margin-bottom: 1.8rem; color: #fff; }
+.wai-section-body    { font-family: var(--font-sans); font-size: 1.1rem; line-height: 1.9; color: #bbb; max-width: 560px; }
 .wai-section-body strong { color: #fff; font-weight: 500; }
 .wai-divider         { width: 40px; height: 1px; background: #2a2a2a; margin: 3rem 0; }
 
@@ -100,7 +100,7 @@
 }
 .wai-skill-chip:hover { background: #252525; transform: translateY(-3px); }
 .wai-skill-chip i    { font-size: 1.8rem; color: #cecacc; }
-.wai-skill-chip span { font-size: 0.72rem; color: #9e9c9c; text-align: center; font-family: "poppins", sans-serif; }
+.wai-skill-chip span { font-size: 0.72rem; color: #9e9c9c; text-align: center; font-family: var(--font-sans); }
 
 .wai-tools { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.5rem; }
 .wai-tool-tag {
@@ -110,11 +110,11 @@
   font-size: 0.85rem;
   color: #9e9c9c;
   border: 1px solid #2a2a2a;
-  font-family: "poppins", sans-serif;
+  font-family: var(--font-sans);
 }
 
 .wai-contact-big {
-  font-family: "poppins", sans-serif;
+  font-family: var(--font-sans);
   font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 600;
   line-height: 1.15;
@@ -131,7 +131,7 @@
   color: #fff;
   font-size: 1rem;
   text-decoration: none;
-  font-family: "poppins", sans-serif;
+  font-family: var(--font-sans);
   transition: background 250ms, transform 250ms;
 }
 .wai-cta:hover { background: rgba(54, 215, 236, 0.08); transform: scale(1.03); }

@@ -1,41 +1,17 @@
-import { useState } from "react"
+import { Link } from "react-router-dom"
 import { projects } from "../../data.js"
-import Card from "../../components/Card/Card.jsx"
+import ProjectsShowcase from "../../components/ProjectsShowcase/ProjectsShowcase.jsx"
 import "./myprojectpage.css"
 
 export default function MyProjectsPage() {
-  const allTags = ["All", ...new Set(projects.flatMap(p => p.tags))]
-  const [active, setActive] = useState("All")
-
-  const filtered = active === "All"
-    ? projects
-    : projects.filter(p => p.tags.includes(active))
-
   return (
-    <div className="projects-page app">
-      <div className="projects-header">
-        <div className="projects-label">Portfolio</div>
-        <h1 className="projects-title">My Projects</h1>
-        <p className="projects-count">{filtered.length} project{filtered.length !== 1 ? "s" : ""}</p>
+    <>
+      <Link to="/" className="projects-back" aria-label="Back to home">
+        <i className="ri-arrow-go-back-line" aria-hidden="true"></i>
+      </Link>
+      <div className="projects-page app">
+        <ProjectsShowcase projects={projects} />
       </div>
-
-      <div className="projects-filters">
-        {allTags.map(tag => (
-          <button
-            key={tag}
-            className={`filter-chip${active === tag ? " active" : ""}`}
-            onClick={() => setActive(tag)}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
-
-      <div className="projects-grid">
-        {filtered.map((project, i) => (
-          <Card key={project.id} card={project} index={i} />
-        ))}
-      </div>
-    </div>
+    </>
   )
 }

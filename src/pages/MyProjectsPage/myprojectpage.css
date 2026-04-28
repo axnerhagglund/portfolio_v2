@@ -1,36 +1,30 @@
-.projects-page {
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-}
-
-.projects-header  { margin-bottom: 2.5rem; }
-.projects-label   { color: #36D7EC; font-size: 0.75rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 0.6rem; font-family: "poppins", sans-serif; }
-.projects-title   { font-family: "poppins", sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: #fff; }
-.projects-count   { color: #555; font-size: 0.85rem; margin-top: 0.4rem; font-family: "poppins", sans-serif; }
-
-.projects-filters {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
-}
-
-.filter-chip {
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.82rem;
+.projects-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 201;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  border: 1px solid #2a2a2a;
-  background: transparent;
-  color: #9e9c9c;
-  transition: border-color 200ms, color 200ms, background 200ms;
-  font-family: "poppins", sans-serif;
+  backdrop-filter: blur(4px);
+  transition: transform 250ms ease;
 }
-.filter-chip:hover  { border-color: #555; color: #fff; }
-.filter-chip.active { background: #fff; color: #0A0A0A; border-color: #fff; font-weight: 500; }
+.projects-back:hover { transform: scale(1.1); }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+.projects-page {
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+}
+
+.projects-page.app {
+  max-width: 1180px;
 }

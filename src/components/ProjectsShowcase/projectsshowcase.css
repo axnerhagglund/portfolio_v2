@@ -1,0 +1,238 @@
+.ps-root {
+  --ps-accent: #36d7ec;
+  --ps-pill: #1a1a1a;
+  --ps-pill-border: #2c2c2c;
+  width: 100%;
+  font-family: var(--font-sans);
+}
+
+.ps-head {
+  margin-bottom: 1.25rem;
+}
+
+.ps-filter-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d4d4d4;
+  margin-bottom: 1rem;
+}
+
+.ps-filter-index {
+  color: rgba(54, 215, 236, 0.85);
+  font-variant-numeric: tabular-nums;
+}
+
+.ps-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ps-chip {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.45rem 0.8rem;
+  border-radius: 3px;
+  border: 1px solid var(--ps-pill-border);
+  background: var(--ps-pill);
+  color: #8a8a8a;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.ps-chip:hover {
+  color: #ccc;
+  border-color: #444;
+}
+
+.ps-chip.is-active {
+  background: #2a2a2a;
+  color: #f0f0f0;
+  border-color: rgba(54, 215, 236, 0.45);
+  box-shadow: 0 0 0 1px rgba(54, 215, 236, 0.12);
+}
+
+.ps-divider {
+  border: none;
+  height: 0;
+  margin: 0 0 1.75rem;
+  border-top: 1px dotted #333;
+}
+
+.ps-showcase {
+  width: 100%;
+}
+
+.ps-swiper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0 0.25rem;
+}
+
+.ps-slide {
+  height: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.ps-article {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.5rem 0 2rem;
+  text-align: left;
+}
+
+.ps-visual {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto 1.25rem;
+}
+
+.ps-frame {
+  position: relative;
+  padding: 10px 10px 20px;
+  background: linear-gradient(165deg, #161616, #0c0c0c);
+  border-radius: 28px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 0 0 1px #000 inset,
+    0 25px 50px -12px rgba(0, 0, 0, 0.7),
+    0 0 40px -20px rgba(54, 215, 236, 0.08);
+}
+
+.ps-frame-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 18;
+  object-fit: cover;
+  border-radius: 20px;
+  background: #0a0a0a;
+}
+
+.ps-frame-notch {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 5px;
+  background: #0a0a0a;
+  border-radius: 4px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.ps-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  max-width: 20ch;
+  margin: 0 0 0.5rem;
+}
+
+.ps-meta {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8f8f8f;
+  margin: 0 0 1.1rem;
+}
+
+.ps-lede {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #8a8a8a;
+  max-width: none;
+  margin: 0 0 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ps-linkout {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ps-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ps-linkout:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.ps-soon {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5c5c5c;
+}
+
+.ps-empty {
+  font-family: var(--font-sans);
+  color: #6a6a6a;
+  font-size: 0.9rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 699px) {
+  .ps-visual {
+    max-width: 280px;
+  }
+  .ps-title {
+    font-size: clamp(1.65rem, 4.5vw, 2.15rem);
+  }
+  .ps-lede {
+    font-size: 0.86rem;
+    -webkit-line-clamp: 6;
+  }
+}
+
+@media (max-width: 400px) {
+  .ps-filter-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-swiper,
+  .ps-swiper .swiper-wrapper {
+    transition-duration: 0.01ms !important;
+  }
+}

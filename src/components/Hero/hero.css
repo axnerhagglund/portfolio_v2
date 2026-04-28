@@ -1,5 +1,5 @@
 .hero__title {
-  font-family: "poppins", sans-serif;
+  font-family: var(--font-sans);
   font-size: 3.5rem;
   margin: 2rem 0;
   color: #fff;

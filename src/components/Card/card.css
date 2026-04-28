@@ -58,7 +58,7 @@
 
 .card-rubrik {
   font-weight: 400;
-  font-family: "poppins";
+  font-family: var(--font-sans);
   color: white;
   margin: 1rem 0 0.2rem 0;
   font-size: 1.8rem;
@@ -77,13 +77,13 @@
   background: rgb(53, 53, 53);
   border-radius: 12px;
   font-size: 0.85rem;
-  font-family: "poppins";
+  font-family: var(--font-sans);
   font-weight: 400;
 }
 
 .card-text {
   color: #aaa;
-  font-family: "poppins";
+  font-family: var(--font-sans);
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
@@ -96,7 +96,7 @@
   border-radius: 20px;
   color: white;
   text-decoration: none;
-  font-family: "poppins";
+  font-family: var(--font-sans);
   font-size: 0.88rem;
   display: inline-block;
   align-self: flex-start;

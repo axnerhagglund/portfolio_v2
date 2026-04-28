@@ -1,52 +1,50 @@
 export const projects = [
-    {
-      id: 1,
-      title: "Minimalist Design",
-      image: "/images/bonz-landingpage.png",
-      alt: "Picture of a hotel website landing page", 
-      tags: ["Html", "Css", "Javascript"],
-      description:
-        "One of my first projects was built using HTML, CSS, and JavaScript. I started by sketching the layout and structure, then brought it to life with CSS.",
-      buttonText: "View",
-      link: "https://discoverecoliving-bonz.netlify.app/" 
-    },
-
-    {
-      id: 2,
-      title: "Movie data base",
-      image: "/images/axnersfilmdatabas.png",
-      alt: "picture of a movie data base landing page",
-      tags: ["JavaScript", "Css", "Html"],
-      description:
-        "My first ever heavy JavaScript project, where i gathered some experience under my belt, such as working with Asynchronous JavaScript and API Integration. ",
-      buttonText: "View",
-      link: "https://axnersfilmdatabas.netlify.app/"
-    },
-   {
+  {
+    id: 1,
+    title: "New build",
+    image: "/images/project-placeholder.svg",
+    alt: "Project preview not available yet",
+    tags: ["React", "Vite", "Design"],
+    meta: "2026 — WIP · FRONT-END",
+    description:
+      "I’m putting together a new case study here. Check back soon for screenshots, stack notes, and a live demo.",
+    buttonText: "View",
+    link: ""
+  },
+  {
+    id: 2,
+    title: "Interface refresh",
+    image: "/images/project-placeholder.svg",
+    alt: "Project preview not available yet",
+    tags: ["UI", "UX", "Figma"],
+    meta: "2026 — TEASER · DESIGN",
+    description:
+      "A focused front-end and design piece is on the way — something cleaner and more up to date with how I work today.",
+    buttonText: "View",
+    link: ""
+  },
+  {
     id: 3,
-      title: "Where it's @",
-      image: "/images/whereitsat.png",
-      alt: "picture of where its at background base landing page",
-      tags: ["React", "Css"],
-      description:
-        "I built a React app where users could browse and buy concert tickets by fetching data from an external API. I used Zustand for global state management and Framer Motion for smooth animations.",
-      buttonText: "View",
-      link: ""
-   },
-    {
+    title: "Side project",
+    image: "/images/project-placeholder.svg",
+    alt: "Project preview not available yet",
+    tags: ["JavaScript", "API", "WIP"],
+    meta: "2025 — WIP · PRODUCT",
+    description:
+      "I’m not ready to show this one in full yet, but the write-up and link are coming when the build feels ship-worthy.",
+    buttonText: "View",
+    link: ""
+  },
+  {
     id: 4,
-      title: "Allemansrätten",
-      image: "/images/allemansratten.png",
-      alt: "picture of where its at background base landing page",
-      tags: ["React", "Css"],
-      description:
-        "A standalone project made for those not familiar with Allemansrätten. Built with react. Mostly a shell right now.",
-      buttonText: "View",
-      link: "https://allemansrattenv1.vercel.app/"
-   }
-
-
-    
-    
-    
-  ];
+    title: "Portfolio vNext",
+    image: "/images/project-placeholder.svg",
+    alt: "Project preview not available yet",
+    tags: ["React", "Animation", "2026"],
+    meta: "2026 — IN PROGRESS · SITE",
+    description:
+      "This site itself keeps evolving. I’ll highlight the next public slice of work here once it’s polished enough to share.",
+    buttonText: "View",
+    link: ""
+  }
+]

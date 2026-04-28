@@ -1,0 +1,17 @@
+/* Widen landing column to match projects slider (1180) */
+.home-page.app {
+  max-width: 1180px;
+}
+
+.home-projects {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.home-projects__title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}

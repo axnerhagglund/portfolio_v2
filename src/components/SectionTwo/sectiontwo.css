@@ -3,13 +3,13 @@
 }
 
 .sectionTwo__h1 {
-    font-family: "poppins";
+    font-family: var(--font-sans);
     margin-bottom: 1rem;
     font-size: 1.6rem;
 }
 
 .sectionTwo__p {
-    font-family: "poppins";
+    font-family: var(--font-sans);
     
     
 }

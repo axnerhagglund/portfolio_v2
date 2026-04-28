@@ -1,24 +1,19 @@
 import Hero from "../../components/Hero/Hero.jsx"
+import ProjectsShowcase from "../../components/ProjectsShowcase/ProjectsShowcase.jsx"
+import { projects } from "../../data.js"
 import "./homepage.css"
-import {quickInfo} from "../../quickInfoData.js"
-import {projects} from "../../data.js"
-import CardList from "../../components/CardList/CardList.jsx"
-import QuickInfoCardList from "../../components/QuickInfoCardList/QuickInfoCardList.jsx"
+
 function HomePage() {
   return (
-    <section className="app">
-    <Hero />
-    
-      {/* {
-        projects && <CardList key={projects.id} projects={ projects } />
-      } */}
+    <section className="app home-page">
+      <Hero />
 
-      {
-        quickInfo && <QuickInfoCardList key={quickInfo.id} quickInfo={ quickInfo }/>
-      }
-        
-      
-      
+      <section className="home-projects" aria-labelledby="home-projects-heading">
+        <h2 id="home-projects-heading" className="home-projects__title">
+          Projects
+        </h2>
+        <ProjectsShowcase projects={projects} showFilters={false} />
+      </section>
     </section>
   )
 }
