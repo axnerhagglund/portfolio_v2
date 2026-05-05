@@ -42,7 +42,7 @@ export default function ProjectDetail() {
   if (!project) {
     return (
       <div className="pd-root">
-        <Link to="/" className="pd-back" aria-label="Back to home">
+        <Link to="/" viewTransition className="pd-back" aria-label="Back to home">
           <span aria-hidden="true">←</span> Back
         </Link>
         <main className="pd-page">
@@ -188,7 +188,7 @@ export default function ProjectDetail() {
             </>
           )}
 
-          <Link to="/" className="pd-linkout">
+          <Link to="/" viewTransition className="pd-linkout">
             <span aria-hidden="true">←</span> Back to all projects
           </Link>
         </section>

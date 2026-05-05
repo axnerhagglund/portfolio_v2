@@ -44,7 +44,7 @@ export default function WhoAmI() {
     <div className="wai-root">
       <div className="wai-progress" ref={progressRef} aria-hidden="true"></div>
 
-      <Link to="/" className="wai-back" aria-label="Back to home">
+      <Link to="/" viewTransition className="wai-back" aria-label="Back to home">
         <span aria-hidden="true">←</span> Back
       </Link>
 

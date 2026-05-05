@@ -6,7 +6,7 @@ function IconGroup() {
     <>
       {/* Desktop: vertical column pinned to the right edge */}
       <nav className="icon-rail" aria-label="Primary">
-        <Link className="icons-section" to="/who-am-i">
+        <Link className="icons-section" to="/who-am-i" viewTransition>
           <i className="ri-user-line icons-navbar" aria-hidden="true"></i>
           <p className="icon-text">Who am I</p>
         </Link>
@@ -27,7 +27,7 @@ function IconGroup() {
 
       {/* Mobile: simple inline strip */}
       <nav className="icon-mobile" aria-label="Primary">
-        <Link to="/who-am-i" className="icon-mobile__link">
+        <Link to="/who-am-i" viewTransition className="icon-mobile__link">
           <i className="ri-user-line" aria-hidden="true"></i>
           Who am I
         </Link>
