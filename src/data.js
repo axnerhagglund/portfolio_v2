@@ -1,50 +1,64 @@
 export const projects = [
   {
     id: 1,
-    title: "New build",
-    image: "/images/project-placeholder.svg",
-    alt: "Project preview not available yet",
-    tags: ["React", "Vite", "Design"],
-    meta: "2026 — WIP · FRONT-END",
+    slug: "north",
+    title: "North - E commerce assistant",
+    image: "/images/chatbot.png",
+    alt: "North chatbot mascot illustration",
+    tags: ["React", "AI", "E-commerce"],
+    meta: "2026 — IN PROGRESS · PRODUCT",
     description:
-      "I’m putting together a new case study here. Check back soon for screenshots, stack notes, and a live demo.",
+      "An AI-powered shopping assistant for e-commerce. Write-up, screenshots, and a live demo are coming once the build is ship-worthy.",
     buttonText: "View",
+    detail: {
+      tagline: "An AI shopping companion that actually helps people buy.",
+      year: "2026",
+      role: "Frontend & product design",
+      status: "In progress",
+      overview:
+        "North is an AI assistant built for e-commerce stores. It guides shoppers through catalogues the way a great in-store associate would, asking the right questions, surfacing the right products, and removing the friction between curiosity and checkout.",
+      problem:
+        "Most online stores treat search as a text box. Shoppers know what they want, but not what it's called, and bounce when the catalogue doesn't speak their language. North closes that gap with a conversation instead of a query.",
+      approach:
+        "I'm building the storefront-facing chat experience, the product cards it returns, and the design system that ties it to any host store. The focus is speed, clarity, and a tone that feels human enough to trust with a buying decision.",
+      stack: ["React", "Vite", "TypeScript", "Node", "OpenAI API", "Tailwind"],
+      gallery: [
+        { src: "/images/project-placeholder.svg", alt: "North conversation flow placeholder" },
+        { src: "/images/project-placeholder.svg", alt: "North product card placeholder" }
+      ],
+      links: []
+    },
     link: ""
   },
   {
     id: 2,
-    title: "Interface refresh",
-    image: "/images/project-placeholder.svg",
-    alt: "Project preview not available yet",
-    tags: ["UI", "UX", "Figma"],
-    meta: "2026 — TEASER · DESIGN",
+    slug: "ordna",
+    title: "Ordna - Smarter communication for associations",
+    image: "/images/ordna.png",
+    alt: "Ordna app illustration",
+    tags: ["React", "Mobile", "Community"],
+    meta: "2026 — IN PROGRESS · PRODUCT",
     description:
-      "A focused front-end and design piece is on the way — something cleaner and more up to date with how I work today.",
+      "An app that helps Swedish föreningar (associations and clubs) run cleaner, calmer communication with their members.",
     buttonText: "View",
-    link: ""
-  },
-  {
-    id: 3,
-    title: "Side project",
-    image: "/images/project-placeholder.svg",
-    alt: "Project preview not available yet",
-    tags: ["JavaScript", "API", "WIP"],
-    meta: "2025 — WIP · PRODUCT",
-    description:
-      "I’m not ready to show this one in full yet, but the write-up and link are coming when the build feels ship-worthy.",
-    buttonText: "View",
-    link: ""
-  },
-  {
-    id: 4,
-    title: "Portfolio vNext",
-    image: "/images/project-placeholder.svg",
-    alt: "Project preview not available yet",
-    tags: ["React", "Animation", "2026"],
-    meta: "2026 — IN PROGRESS · SITE",
-    description:
-      "This site itself keeps evolving. I’ll highlight the next public slice of work here once it’s polished enough to share.",
-    buttonText: "View",
+    detail: {
+      tagline: "Communication tools built for the way associations actually work.",
+      year: "2026",
+      role: "Frontend & product design",
+      status: "In progress",
+      overview:
+        "Ordna is a communication app for föreningar — the Swedish associations, clubs, and societies that run on volunteer time. It replaces the messy mix of group chats, email threads, and paper notes with one calm space for announcements, events, and member updates.",
+      problem:
+        "Most associations rely on tools that weren't built for them. Information gets lost in long chat threads, members miss what matters, and the people running things spend more time chasing replies than organising. Ordna treats clarity as the feature.",
+      approach:
+        "I'm shaping the member-facing app and the lightweight admin surface board members use to post and plan. The tone is quiet and grown-up, the interactions are obvious, and the defaults respect that nobody opens a community app for fun.",
+      stack: ["React", "React Native", "TypeScript", "Node", "Supabase"],
+      gallery: [
+        { src: "/images/project-placeholder.svg", alt: "Ordna feed placeholder" },
+        { src: "/images/project-placeholder.svg", alt: "Ordna event view placeholder" }
+      ],
+      links: []
+    },
     link: ""
   }
 ]

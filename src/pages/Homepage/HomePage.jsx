@@ -8,10 +8,7 @@ function HomePage() {
     <section className="app home-page">
       <Hero />
 
-      <section className="home-projects" aria-labelledby="home-projects-heading">
-        <h2 id="home-projects-heading" className="home-projects__title">
-          Projects
-        </h2>
+      <section className="home-projects" aria-label="Projects">
         <ProjectsShowcase projects={projects} showFilters={false} />
       </section>
     </section>

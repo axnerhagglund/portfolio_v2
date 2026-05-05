@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom"
 
 import HomePage from "./pages/Homepage/HomePage"
 import WhoAmI from "./pages/WhoAmIPage/WhoAmI"
-import MyProjectsPage from "./pages/MyProjectsPage/MyProjectsPage"
+import ProjectDetail from "./pages/ProjectDetailPage/ProjectDetail"
 const router = createBrowserRouter([
   {
     path : "/",
@@ -13,17 +13,17 @@ const router = createBrowserRouter([
     element : <WhoAmI />
   },
   {
-    path : "/my-projects",
-    element : <MyProjectsPage />
+    path : "/projects/:slug",
+    element : <ProjectDetail />
   }
 ])
 function App() {
-  
+
 
   return (
-    
+
       <RouterProvider router={ router } />
-    
+
   )
 }
 

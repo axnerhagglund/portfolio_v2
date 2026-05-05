@@ -1,5 +1,5 @@
 :root {
-  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 * {
@@ -20,7 +20,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #36D7EC;
+  outline: 2px solid #E8C97D;
   outline-offset: 2px;
   border-radius: 2px;
 }

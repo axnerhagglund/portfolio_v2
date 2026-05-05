@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Keyboard, Mousewheel } from "swiper/modules"
 import "swiper/css"
@@ -75,11 +76,13 @@ export default function ProjectsShowcase({ projects: projectList, showFilters = 
             spaceBetween={16}
             speed={650}
             autoHeight
-            grabCursor
-            keyboard={{ enabled: true }}
+            centeredSlides={total === 1}
+            grabCursor={total > 1}
+            allowTouchMove={total > 1}
+            keyboard={{ enabled: total > 1 }}
             breakpoints={{
-              700: { slidesPerView: 2, spaceBetween: 20 },
-              1100: { slidesPerView: 3, spaceBetween: 24 }
+              700: { slidesPerView: Math.min(2, total), spaceBetween: 20 },
+              1100: { slidesPerView: Math.min(3, total), spaceBetween: 24 }
             }}
             onSwiper={s => {
               setPerView(syncSlidePerView(s))
@@ -98,36 +101,43 @@ export default function ProjectsShowcase({ projects: projectList, showFilters = 
               <SwiperSlide key={project.id} className="ps-slide">
                 <article className="ps-article" aria-label={project.title}>
                   <div className="ps-visual">
-                    <div className="ps-frame">
-                      <img
-                        className="ps-frame-img"
-                        src={project.image}
-                        alt={project.alt}
-                        loading="lazy"
-                      />
-                      <div className="ps-frame-notch" aria-hidden="true" />
-                    </div>
+                    <img
+                      className="ps-image"
+                      src={project.image}
+                      alt={project.alt}
+                      loading="lazy"
+                    />
                   </div>
                   <h2 className="ps-title">{project.title}</h2>
                   {project.meta && (
                     <p className="ps-meta">{project.meta}</p>
                   )}
                   <p className="ps-lede">{project.description}</p>
-                  {project.link
+                  {project.slug
                     ? (
-                        <a
+                        <Link
                           className="ps-linkout"
-                          href={project.link}
-                          target="_blank"
-                          rel="noreferrer"
+                          to={`/projects/${project.slug}`}
                         >
-                          Open project
-                          <i className="ri-arrow-right-up-line" aria-hidden="true" />
-                        </a>
+                          View project
+                          <i className="ri-arrow-right-line" aria-hidden="true" />
+                        </Link>
                       )
-                    : (
-                        <span className="ps-soon">Coming soon</span>
-                      )}
+                    : project.link
+                      ? (
+                          <a
+                            className="ps-linkout"
+                            href={project.link}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Open project
+                            <i className="ri-arrow-right-up-line" aria-hidden="true" />
+                          </a>
+                        )
+                      : (
+                          <span className="ps-soon">Coming soon</span>
+                        )}
                 </article>
               </SwiperSlide>
             ))}
