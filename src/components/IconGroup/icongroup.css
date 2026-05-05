@@ -1,39 +1,90 @@
+/* ---------- shared item style (kept from original) ---------- */
 .icons-navbar {
-    color: rgb(206, 204, 204);
-    font-size: 1.5rem;
-    padding: 10px;
-    background: rgb(29, 29, 29);
-    border-radius: 10px;
+  color: rgb(206, 204, 204);
+  font-size: 1.5rem;
+  padding: 10px;
+  background: rgb(29, 29, 29);
+  border-radius: 10px;
+  transition: background 250ms ease, color 250ms ease;
 }
 
 .icon-text {
-    color: white;
-    font-family: var(--font-sans);
-    font-weight: 400;
+  color: white;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .icons-section {
-    
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: .7rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 250ms;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 250ms ease;
 }
 
-@media (min-width:700px) {
-    .icon-desktop-wrapper {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     max-width: 800px;
-    }
+.icons-section:hover .icons-navbar,
+.icons-section:focus-visible .icons-navbar {
+  background: rgb(40, 40, 40);
+  color: #E8C97D;
+}
+.icons-section:hover,
+.icons-section:focus-visible {
+  transform: translateX(-3px);
+}
 
-    .icons-section:hover,
-    .icons-section:focus {
-        transform: scale(.9);
-    }
- 
- }      
+/* ---------- desktop: vertical rail on the right ---------- */
+.icon-rail {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .icon-rail {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    position: fixed;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+    z-index: 90;
+  }
+}
+
+/* ---------- mobile: inline strip ---------- */
+.icon-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 1.6rem 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.icon-mobile__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ddd;
+  text-decoration: none;
+  transition: color 200ms;
+}
+.icon-mobile__link i {
+  font-size: 1.1rem;
+  color: rgb(206, 204, 204);
+}
+.icon-mobile__link:hover {
+  color: #E8C97D;
+}
+.icon-mobile__link:hover i {
+  color: #E8C97D;
+}
+
+@media (min-width: 900px) {
+  .icon-mobile { display: none; }
+}

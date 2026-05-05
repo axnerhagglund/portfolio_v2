@@ -4,11 +4,12 @@ import "./whoami.css"
 
 export default function WhoAmI() {
   const progressRef = useRef(null)
-  const ghost1Ref = useRef(null)
-  const ghost2Ref = useRef(null)
-  const ghost3Ref = useRef(null)
-  const ghost4Ref = useRef(null)
   const photoRef = useRef(null)
+  const cupsRef = useRef([])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -20,56 +21,57 @@ export default function WhoAmI() {
       if (progressRef.current) progressRef.current.style.width = pct + "%"
 
       if (reduceMotion) return
-      if (ghost1Ref.current) ghost1Ref.current.style.transform = `translateY(${scrollTop * -0.25}px)`
-      if (ghost2Ref.current) ghost2Ref.current.style.transform = `translateY(${scrollTop * -0.2}px)`
-      if (ghost3Ref.current) ghost3Ref.current.style.transform = `translateY(${scrollTop * -0.18}px)`
-      if (ghost4Ref.current) ghost4Ref.current.style.transform = `translateY(${scrollTop * -0.22}px)`
-      if (photoRef.current)  photoRef.current.style.transform  = `translateY(${scrollTop * -0.15}px)`
+      if (photoRef.current) photoRef.current.style.transform = `translateY(${scrollTop * -0.08}px)`
+
+      cupsRef.current.forEach((el) => {
+        if (!el) return
+        el.style.transform = `rotate(${scrollTop * 0.25}deg)`
+      })
     }
     window.addEventListener("scroll", onScroll, { passive: true })
     onScroll()
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const skills = [
-    { name: "HTML5",      iconClass: "ri-html5-line" },
-    { name: "CSS3",       iconClass: "ri-css3-line" },
-    { name: "JavaScript", iconClass: "ri-javascript-line" },
-    { name: "React",      iconClass: "ri-reactjs-line" },
-    { name: "Node",       iconClass: "ri-nodejs-line" },
+  const setCupRef = (i) => (el) => { cupsRef.current[i] = el }
+
+  const toolbox = [
+    "HTML", "CSS", "JavaScript", "React",
+    "Next.js", "Tailwind.css", "Figma", "Supabase", "AWS",
   ]
-  const tools = ["Github", "VsCode", "Git Bash", "Amazon AWS", "Serverless", "Figma"]
 
   return (
     <div className="wai-root">
       <div className="wai-progress" ref={progressRef} aria-hidden="true"></div>
 
       <Link to="/" className="wai-back" aria-label="Back to home">
-        <i className="ri-arrow-go-back-line" aria-hidden="true"></i>
+        <span aria-hidden="true">←</span> Back
       </Link>
 
-      <div className="wai-page">
+      <main className="wai-page">
 
-        {/* 01 Intro */}
-        <section className="wai-section">
-          <div className="wai-ghost" ref={ghost1Ref} style={{ top: "10%", left: "-5%" }} aria-hidden="true">AXNER</div>
-          <div className="wai-intro-inner">
-            <div className="wai-intro-label">01 — Who am I</div>
-            <div className="wai-intro-row">
-              <div>
-                <h1 className="wai-intro-title">
-                  Frontend<br />Developer.<br />
-                  <span className="wai-accent">Based in GBG.</span>
-                </h1>
-                <p className="wai-intro-sub">
-                  After seven years in logistics and sales, I made the leap into frontend
-                  development. I'm a quick learner — and in this field, that matters every
-                  single day.
-                </p>
-                <div className="wai-scroll-cue" aria-hidden="true">
-                  <div className="wai-scroll-line"></div>Scroll to explore
-                </div>
-              </div>
+        <section className="wai-section wai-section--intro">
+          <h1 className="wai-display">
+            Axner<br/>
+            Hägglund.
+          </h1>
+
+          <div className="wai-intro-grid">
+            <div className="wai-lede-col">
+              <p className="wai-lede">
+                Frontend developer in Göteborg. Seven years in logistics
+                and sales, then I started writing code and stopped wanting
+                to do anything else.
+              </p>
+              <p className="wai-body">
+                The first React component I shipped felt better than any
+                quarterly bonus. I came to this work late, which turns out
+                to be the point. I know what I want to spend my Mondays on
+                now.
+              </p>
+            </div>
+
+            <figure className="wai-figure">
               <img
                 className="wai-photo"
                 ref={photoRef}
@@ -79,74 +81,69 @@ export default function WhoAmI() {
                 height="340"
                 loading="lazy"
               />
-            </div>
+            </figure>
           </div>
         </section>
 
-        {/* 02 What I do */}
+        <div className="wai-aster" aria-hidden="true">
+          <img className="wai-cup" ref={setCupRef(0)} src="/images/cup.png" alt="" />
+        </div>
+
         <section className="wai-section">
-          <div className="wai-ghost" ref={ghost2Ref} style={{ top: "15%", right: "-8%" }} aria-hidden="true">BUILD</div>
-          <div className="wai-content">
-            <div className="wai-section-label">02 — What I do</div>
-            <h2 className="wai-section-title">I build things<br />for the web.</h2>
-            <p className="wai-section-body">
-              I've gathered a lot of experience in a very short time,{" "}
-              <strong>due to working hard and staying motivated.</strong> I care about clean
-              code, intuitive interfaces, and products that actually feel good to use.
-            </p>
-            <div className="wai-divider" aria-hidden="true"></div>
-            <p className="wai-section-body">
-              My goal right now is to{" "}
-              <strong>land an internship</strong> at an inspiring web firm that loves web
-              development as much as I do.
-            </p>
-          </div>
+          <h2 className="wai-h2">On the work.</h2>
+          <p className="wai-body wai-body--lg">
+            I build for the web. Mostly React, plenty of vanilla CSS, the
+            occasional Node service when something needs to talk to a
+            database. I care about interfaces that don't waste your time
+            and code that someone else can read on a Monday morning.
+          </p>
+          <p className="wai-body">
+            I notice the small things. The hover that lands a beat too late.
+            The button whose label drifts when it loads. The kind of details
+            people feel without naming.
+          </p>
+          <p className="wai-pull">
+            Looking for a team that takes the craft of this seriously.
+            If that's you, we should talk.
+          </p>
         </section>
 
-        {/* 03 Skills */}
+        <div className="wai-aster" aria-hidden="true">
+          <img className="wai-cup" ref={setCupRef(1)} src="/images/cup.png" alt="" />
+        </div>
+
         <section className="wai-section">
-          <div className="wai-ghost" ref={ghost3Ref} style={{ top: "5%", left: "-3%" }} aria-hidden="true">SKILLS</div>
-          <div className="wai-content">
-            <div className="wai-section-label">03 — Skills & tools</div>
-            <h2 className="wai-section-title">I can speak:</h2>
-            <div className="wai-skills-grid">
-              {skills.map((s, i) => (
-                <div className="wai-skill-chip" key={i}>
-                  <i className={s.iconClass} aria-hidden="true"></i>
-                  <span>{s.name}</span>
-                </div>
-              ))}
-            </div>
-            <div className="wai-divider" aria-hidden="true"></div>
-            <p className="wai-section-label" style={{ marginBottom: "1rem" }}>Dev tools</p>
-            <div className="wai-tools">
-              {tools.map((t, i) => <span key={i} className="wai-tool-tag">{t}</span>)}
-            </div>
-          </div>
+          <h2 className="wai-h2">The toolbox.</h2>
+          <p className="wai-toolbox">
+            {toolbox.map((t, i) => (
+              <span key={t} className="wai-toolbox-item">
+                {t}
+                {i < toolbox.length - 1 && <span className="wai-toolbox-sep"> · </span>}
+              </span>
+            ))}
+          </p>
         </section>
 
-        {/* 04 Contact */}
-        <section className="wai-section">
-          <div className="wai-ghost" ref={ghost4Ref} style={{ top: "20%", right: "-5%" }} aria-hidden="true">HELLO</div>
-          <div className="wai-content">
-            <div className="wai-section-label">04 — Say hello</div>
-            <p className="wai-contact-big">
-              Got an opportunity?<br />Let's <span className="wai-accent">talk.</span>
-            </p>
-            <a
-              className="wai-cta"
-              href="https://www.linkedin.com/in/axnerhägglund/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="ri-linkedin-line" aria-hidden="true"></i>
-              Connect on LinkedIn
-              <i className="ri-arrow-right-up-line" aria-hidden="true"></i>
-            </a>
-          </div>
+        <div className="wai-aster" aria-hidden="true">
+          <img className="wai-cup" ref={setCupRef(2)} src="/images/cup.png" alt="" />
+        </div>
+
+        <section className="wai-section wai-section--end">
+          <h2 className="wai-display wai-display--end">
+            Want&nbsp;to&nbsp;talk?
+          </h2>
+          <a
+            className="wai-cta"
+            href="https://www.linkedin.com/in/axnerhägglund/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Find me on LinkedIn</span>
+            <span aria-hidden="true" className="wai-cta-arrow">→</span>
+          </a>
         </section>
 
-      </div>
+      </main>
     </div>
   )
 }
