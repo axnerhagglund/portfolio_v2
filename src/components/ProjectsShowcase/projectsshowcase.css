@@ -77,20 +77,18 @@
   border-top: 1px dotted #333;
 }
 
-.ps-showcase {
-  width: 100%;
+.ps-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem 1.6rem;
 }
 
-.ps-swiper {
-  width: 100%;
-  overflow: hidden;
-  padding: 0 0 0.25rem;
-}
-
-.ps-slide {
-  height: auto;
-  box-sizing: border-box;
-  width: 100%;
+.ps-grid-item {
+  border-top: 1px dotted #333;
+  padding-top: 1.5rem;
 }
 
 .ps-article {
@@ -106,7 +104,11 @@
 .ps-visual {
   width: 100%;
   max-width: 320px;
-  margin: 0 auto 1.25rem;
+  margin: 0 0 1.25rem;
+}
+
+.ps-visual--large {
+  max-width: 420px;
 }
 
 .ps-image {
@@ -115,6 +117,11 @@
   aspect-ratio: 4 / 5;
   object-fit: contain;
   background: transparent;
+}
+
+/* Removes black matte in exported PNGs on dark background */
+.ps-image--screen {
+  mix-blend-mode: screen;
 }
 
 .ps-title {
@@ -210,8 +217,15 @@
 }
 
 @media (max-width: 699px) {
+  .ps-grid {
+    display: none;
+  }
   .ps-visual {
-    max-width: 280px;
+    max-width: 300px;
+    margin: 0 0 1.25rem;
+  }
+  .ps-visual--large {
+    max-width: 360px;
   }
   .ps-title {
     font-size: clamp(1.65rem, 4.5vw, 2.15rem);
@@ -230,8 +244,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ps-swiper,
-  .ps-swiper .swiper-wrapper {
-    transition-duration: 0.01ms !important;
-  }
+  .ps-image--screen { mix-blend-mode: normal; }
 }
