@@ -4,8 +4,28 @@
 }
 
 .home-projects {
-  padding-top: 2.5rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
+}
+
+.home-projects--standalone {
+  padding-top: 6rem;
+}
+
+.home-projects__kicker {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 1.35rem;
+  border-top: 1px dotted #333;
+  color: #a7a7a7;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .home-projects__title {
@@ -14,4 +34,19 @@
   font-weight: 600;
   color: #fff;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 699px) {
+  .home-projects {
+    padding-top: 1.45rem;
+  }
+
+  .home-projects--standalone {
+    padding-top: 4.5rem;
+  }
+
+  .home-projects__kicker {
+    padding-top: 0.85rem;
+    margin-bottom: 1rem;
+  }
 }

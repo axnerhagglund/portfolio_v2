@@ -9,6 +9,10 @@ function HomePage() {
       <Hero />
 
       <section className="home-projects" aria-label="Projects">
+        <div className="home-projects__kicker" aria-hidden="true">
+          <span>Selected work</span>
+          <span>{String(projects.length).padStart(2, "0")}</span>
+        </div>
         <ProjectsShowcase projects={projects} showFilters={false} />
       </section>
     </section>

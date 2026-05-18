@@ -15,12 +15,12 @@
 }
 
 .image-card-container {
-    margin-top: 1.7rem;
+    margin-top: 1.3rem;
     display: flex;
     flex-direction: row;
     gap: 1.2rem;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.65rem;
     
 }
 
@@ -34,3 +34,9 @@
     color: rgb(158, 156, 156);
 }
 
+@media (max-width: 699px) {
+    .image-card-container {
+        margin-top: 1rem;
+        margin-bottom: 1.35rem;
+    }
+}

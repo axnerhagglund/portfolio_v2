@@ -60,5 +60,48 @@ export const projects = [
       links: []
     },
     link: ""
+  },
+  {
+    id: 3,
+    slug: "ai-lead-agent",
+    title: "AI Lead Agent - Webbyra outreach automation",
+    image: "/images/ai-lead-generator.png",
+    blendMode: "screen",
+    visualSize: "large",
+    alt: "AI lead generator dashboard illustration",
+    tags: ["Node.js", "AI", "Automation"],
+    meta: "2026 — IN PROGRESS · SALES OPS",
+    description:
+      "An AI lead agent that finds, scores, and qualifies Swedish companies, drafts personalized outreach emails, and tracks the full workflow into Supabase and HubSpot.",
+    buttonText: "View",
+    detail: {
+      tagline: "Automated lead discovery and outreach for Swedish web agencies.",
+      year: "2026",
+      role: "AI automation, backend architecture, product",
+      status: "In progress",
+      overview:
+        "This project is a Node.js-based lead automation agent for web agencies. It runs daily, finds companies with weak web and SEO fundamentals, scores each lead with rule-based checks plus Claude evaluation, and prepares personalized outreach for manual approval.",
+      problem:
+        "Lead generation usually means manual prospecting, scattered notes, and low consistency between who gets contacted and why. The process is slow, hard to scale, and difficult to track from first touch to CRM pipeline movement.",
+      approach:
+        "I designed a phased system: lead discovery via search and scraping, technical qualification with SEO + PageSpeed checks, AI-assisted prioritization and email drafting, Gmail sending with safe pacing, and full lifecycle tracking in Supabase and HubSpot, including follow-up, bounce, and opt-out handling.",
+      stack: [
+        "Node.js",
+        "Express",
+        "Supabase Postgres",
+        "Claude API",
+        "SerpAPI",
+        "Google PageSpeed API",
+        "Google Places API",
+        "Gmail API",
+        "HubSpot API"
+      ],
+      gallery: [
+        { src: "/images/ai-lead-generator.png", alt: "AI Lead Agent concept visual" },
+        { src: "/images/project-placeholder.svg", alt: "Lead workflow architecture placeholder" }
+      ],
+      links: []
+    },
+    link: ""
   }
 ]
