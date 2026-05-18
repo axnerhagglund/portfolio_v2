@@ -5,7 +5,7 @@
   --ink-soft: #bdbdbd;
   --ink-mute: #7a7a7a;
   --rule: rgba(255, 255, 255, 0.1);
-  --accent: #E8C97D;
+  --accent: #e7c6ff;
 
   background: var(--bg);
   color: var(--ink);

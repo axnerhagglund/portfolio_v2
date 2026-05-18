@@ -28,16 +28,26 @@ export default function WhoAmI() {
         el.style.transform = `rotate(${scrollTop * 0.25}deg)`
       })
     }
+
     window.addEventListener("scroll", onScroll, { passive: true })
     onScroll()
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
 
-  const setCupRef = (i) => (el) => { cupsRef.current[i] = el }
+  const setCupRef = (index) => (el) => {
+    cupsRef.current[index] = el
+  }
 
   const toolbox = [
-    "HTML", "CSS", "JavaScript", "React",
-    "Next.js", "Tailwind.css", "Figma", "Supabase", "AWS",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Tailwind.css",
+    "Figma",
+    "Supabase",
+    "AWS",
   ]
 
   return (
@@ -49,10 +59,9 @@ export default function WhoAmI() {
       </Link>
 
       <main className="wai-page">
-
         <section className="wai-section wai-section--intro">
           <h1 className="wai-display">
-            Axner<br/>
+            Axner<br />
             Hägglund.
           </h1>
 
@@ -115,10 +124,10 @@ export default function WhoAmI() {
         <section className="wai-section">
           <h2 className="wai-h2">The toolbox.</h2>
           <p className="wai-toolbox">
-            {toolbox.map((t, i) => (
-              <span key={t} className="wai-toolbox-item">
-                {t}
-                {i < toolbox.length - 1 && <span className="wai-toolbox-sep"> · </span>}
+            {toolbox.map((tool, index) => (
+              <span key={tool} className="wai-toolbox-item">
+                {tool}
+                {index < toolbox.length - 1 && <span className="wai-toolbox-sep"> · </span>}
               </span>
             ))}
           </p>
@@ -142,7 +151,6 @@ export default function WhoAmI() {
             <span aria-hidden="true" className="wai-cta-arrow">→</span>
           </a>
         </section>
-
       </main>
     </div>
   )
