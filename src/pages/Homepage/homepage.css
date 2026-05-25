@@ -8,10 +8,6 @@
   padding-bottom: 4rem;
 }
 
-.home-projects--standalone {
-  padding-top: 6rem;
-}
-
 .home-projects__kicker {
   display: flex;
   align-items: baseline;
@@ -19,8 +15,8 @@
   gap: 1rem;
   padding-top: 1rem;
   margin-bottom: 1.35rem;
-  border-top: 1px dotted #333;
-  color: #a7a7a7;
+  border-top: 1px dotted var(--border-rule);
+  color: var(--fg-muted);
   font-family: var(--font-sans);
   font-size: 0.72rem;
   font-weight: 600;
@@ -28,21 +24,9 @@
   text-transform: uppercase;
 }
 
-.home-projects__title {
-  font-family: var(--font-sans);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 1.5rem;
-}
-
 @media (max-width: 699px) {
   .home-projects {
     padding-top: 1.45rem;
-  }
-
-  .home-projects--standalone {
-    padding-top: 4.5rem;
   }
 
   .home-projects__kicker {

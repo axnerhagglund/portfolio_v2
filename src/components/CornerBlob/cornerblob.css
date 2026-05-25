@@ -6,10 +6,11 @@
   height: 340px;
   background: radial-gradient(circle, #252525, #1a1a1a);
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(40px);
   opacity: 0.6;
   pointer-events: none;
   z-index: 0;
   transition: transform 0.12s ease-out;
   transform: translate(-50%, -50%);
+  will-change: transform;
 }

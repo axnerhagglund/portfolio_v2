@@ -1,17 +1,9 @@
 .axner-image {
     border-radius: 12px;
-    width:60px;
+    width: 60px;
     height: 60px;
     object-fit: cover;
-    letter-spacing: 1px;
     display: inline-block;
-   
-
-}
-
-.image-text-darkgrey {
-
-    color: rgba(128, 128, 128, 0.418);
 }
 
 .image-card-container {
@@ -21,17 +13,17 @@
     gap: 1.2rem;
     align-items: center;
     margin-bottom: 1.65rem;
-    
 }
 
 .image-text {
-    color: #fff;
+    color: var(--fg);
     font-family: var(--font-sans);
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
 }
-.gray {
-    color: rgb(158, 156, 156);
+
+.image-text--secondary {
+    color: var(--fg-muted);
 }
 
 @media (max-width: 699px) {

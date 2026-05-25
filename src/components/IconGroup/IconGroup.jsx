@@ -5,10 +5,10 @@ function IconGroup() {
   return (
     <>
       {/* Desktop: vertical column pinned to the right edge */}
-      <nav className="icon-rail" aria-label="Primary">
+      <nav className="icon-rail" aria-label="Primary navigation">
         <Link className="icons-section" to="/who-am-i" viewTransition>
           <i className="ri-user-line icons-navbar" aria-hidden="true"></i>
-          <p className="icon-text">Who am I</p>
+          <span className="icon-text">Who am I</span>
         </Link>
 
         <a
@@ -18,15 +18,15 @@ function IconGroup() {
           rel="noreferrer"
         >
           <i className="ri-chat-3-line icons-navbar" aria-hidden="true"></i>
-          <p className="icon-text">
+          <span className="icon-text">
             Say hello
             <i className="ri-arrow-right-up-line" aria-hidden="true"></i>
-          </p>
+          </span>
         </a>
       </nav>
 
       {/* Mobile: simple inline strip */}
-      <nav className="icon-mobile" aria-label="Primary">
+      <nav className="icon-mobile" aria-label="Primary navigation">
         <Link to="/who-am-i" viewTransition className="icon-mobile__link">
           <i className="ri-user-line" aria-hidden="true"></i>
           Who am I
