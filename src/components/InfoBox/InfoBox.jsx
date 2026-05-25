@@ -2,13 +2,13 @@ import "./infobox.css"
 
 function InfoBox() {
   return (
-    <section className="image-card-container">
-    <img className="axner-image" src="/images/babes.jpg" alt="pic of me"/>
-        <section className="image-card-text">
-            <p className="image-text">Frontend developer <span className="image-text-darkgrey">Student</span> </p>
-            <p className="image-text gray">Based In Gothenburg</p>
-        </section>
-    </section>
+    <div className="image-card-container">
+      <img className="axner-image" src="/images/babes.jpg" alt="Portrait of Axner Hägglund" />
+      <div className="image-card-text">
+        <p className="image-text">Frontend developer</p>
+        <p className="image-text image-text--secondary">Based in Göteborg</p>
+      </div>
+    </div>
   )
 }
 
