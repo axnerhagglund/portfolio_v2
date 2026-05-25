@@ -1,21 +1,10 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import "./projectsshowcase.css"
 
 export default function ProjectsShowcase({ projects: projectList, showFilters = true }) {
   const allTags = ["All", ...new Set(projectList.flatMap(p => p.tags))]
   const [active, setActive] = useState("All")
-  const [isMobile, setIsMobile] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(max-width: 699px)").matches
-  )
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 699px)")
-    const update = () => setIsMobile(mq.matches)
-    update()
-    mq.addEventListener("change", update)
-    return () => mq.removeEventListener("change", update)
-  }, [])
 
   const filtered = showFilters
     ? (active === "All"
@@ -97,23 +86,13 @@ export default function ProjectsShowcase({ projects: projectList, showFilters = 
       )}
 
       {total > 0 ? (
-        isMobile ? (
-          <ul className="ps-list">
-            {filtered.map((project) => (
-              <li key={project.id} className="ps-list-item">
-                {renderArticle(project)}
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <ul className="ps-grid">
-            {filtered.map((project) => (
-              <li key={project.id} className="ps-grid-item">
-                {renderArticle(project)}
-              </li>
-            ))}
-          </ul>
-        )
+        <ul className="ps-grid">
+          {filtered.map((project) => (
+            <li key={project.id} className="ps-grid-item">
+              {renderArticle(project)}
+            </li>
+          ))}
+        </ul>
       ) : (
         <p className="ps-empty">No projects match this filter.</p>
       )}

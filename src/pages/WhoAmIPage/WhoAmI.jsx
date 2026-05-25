@@ -13,8 +13,10 @@ export default function WhoAmI() {
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    let frame = 0
 
-    const onScroll = () => {
+    const apply = () => {
+      frame = 0
       const scrollTop = window.scrollY || document.documentElement.scrollTop
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight
       const pct = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0
@@ -29,9 +31,17 @@ export default function WhoAmI() {
       })
     }
 
+    const onScroll = () => {
+      if (frame) return
+      frame = requestAnimationFrame(apply)
+    }
+
     window.addEventListener("scroll", onScroll, { passive: true })
-    onScroll()
-    return () => window.removeEventListener("scroll", onScroll)
+    apply()
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
   }, [])
 
   const setCupRef = (index) => (el) => {
